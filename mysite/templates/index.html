@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>CRUD Website</title>
+</head>
+<body>
+    <center>
+        <h1> Testing</h1>
+        <hr/>
+        <a href="% url 'index'.html">Create new user</a>
+        <table border="1">
+            <tr>
+                <th>email</th>
+                <th>name</th>
+                <th>surname</th>
+                <th>salary</th>
+                <th>phone</th>
+                <th>cname</th>
+            </tr>
+            <tr>
+                {%for result in data %}
+                <td>{{result.email}}</td>
+                <td>{{result.name}}</td>
+                <td>{{result.surname}}</td>
+                <td>{{result.salary}}</td>
+                <td>{{result.phone}}</td>
+                <td>{{result.cname}}</td>
+                {%endfor%}
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

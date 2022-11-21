@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>CRUD Website</title>
+</head>
+<body>
+    <center>
+        <h1> Inserting</h1>
+        <hr/>
+        <form method="POST">
+            % csrf_token %
+        <table border="1">
+            <tr>
+                <td>User email</td>
+                <td><input type="text" placeholder="Enter user email" name="email"></td>
+            </tr>
+            <tr>
+                <td>User name</td>
+                <td><input type="text" placeholder="Enter user name" name="name"></td>
+            </tr>
+            <tr>
+                <td>User surname</td>
+                <td><input type="text" placeholder="Enter user surname" name="surname"></td>
+            </tr>
+            <tr>
+                <td>User salary</td>
+                <td><input type="text" placeholder="Enter user salary" name="salary"></td>
+            </tr>
+            <tr>
+                <td>User phone</td>
+                <td><input type="text" placeholder="Enter user phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td>User country name</td>
+                <td><input type="text" placeholder="Enter user country name" name="cname"></td>
+            </tr>
+
+
+                <td>{{result.email}}</td>
+                <td>{{result.name}}</td>
+                <td>{{result.surname}}</td>
+                <td>{{result.salary}}</td>
+                <td>{{result.phone}}</td>
+                <td>{{result.cname}}</td>
+            </tr>
+        </table>
+        % if messages %
+        %for mess in messages%
+        <b style="color:bisque;">mess</b>
+        %endfor%
+        % endif %
+    </form>
+    </center>
+</body>
+
+</html>
